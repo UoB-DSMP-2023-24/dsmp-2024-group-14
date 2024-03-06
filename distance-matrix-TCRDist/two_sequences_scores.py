@@ -25,9 +25,9 @@ def getScoreSW(aa1, aa2, gap_penalty=-10):
 # returns a normalized (between 0 and 1) SW distance
 # CDRdist=   1 -  { (sw(A,B))^2   /       { sw(A,A) * sw(B,B) } }
 def getDistanceSW(aa1, aa2, length_dep=True, gap_penalty=-10):
-    if length_dep:
-        if len(aa1) != len(aa2):
-            return 1.0
+    #if length_dep:
+        #if len(aa1) != len(aa2):
+            #return 1.0
 
      # get self-scores for both
     self_score_1 = getScoreSW(aa1, aa1, gap_penalty)
