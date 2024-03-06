@@ -5,7 +5,7 @@ Created on Thu Feb 22 00:10:52 2024
 
 @author: guanyingxue
 """
-from sw_scoring import getDistanceSW
+from two_sequences_scores import getDistanceSW
 cdr_list=["CASRGASGSYEQYF","CASSQGSGWETQYF","CASSPQRGPYEQYF","CASRRGTDLTDTQYF"]
 
 # calculate distance scores and return a dictionary of dictionaries of scores
