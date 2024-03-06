@@ -1,13 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Feb 22 00:10:52 2024
+Created on Wed Mar 6 16:26:43 2024
 
-@author: guanyingxue
+@author: XiaofeiSong
 """
 from two_sequences_scores import getDistanceSW
-cdr_list=["CASRGASGSYEQYF","CASSQGSGWETQYF","CASSPQRGPYEQYF","CASRRGTDLTDTQYF"]
-
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import RobustScaler
+import matplotlib.pyplot as plt
+cdr_pd=pd.read_csv('./TRA_prepared.csv', header=None)
+print(cdr_pd)
+cdr_list=[]
+for cdr in cdr_pd[0]:
+    cdr_list.append(cdr)
+print(cdr_list)
 # calculate distance scores and return a dictionary of dictionaries of scores
 def calculate_scores(cdr_list, length_dep=True):
     memo = {}
@@ -29,5 +37,5 @@ def calculate_scores(cdr_list, length_dep=True):
 
 
 distance_scores = calculate_scores(cdr_list)
-
+print(1)
 print(distance_scores)
