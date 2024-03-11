@@ -10,12 +10,12 @@ from two_sequences_scores import getDistanceSW
 import pandas as pd
 
 # read the TRA sequence of CDR3
-cdr_pd=pd.read_csv('./TRA_prepared.csv', header=None)
+cdr_pd=pd.read_csv('./TRA_MacacaMulatta.csv', header=0)
 print(cdr_pd)
 cdr_list=[]
-for cdr in cdr_pd[0]:
+for cdr in cdr_pd['cdr3']:
     cdr_list.append(cdr)
-print(cdr_list)
+#print(cdr_list)
 
 # calculate distance scores and return a dictionary of dictionaries of scores
 def calculate_scores(cdr_list, length_dep=True):
@@ -53,9 +53,9 @@ distance_matrix = convert_to_distance_matrix(distance_scores)
 
 # Print distance matrix
 def print_distance_matrix(distance_matrix, cdr_list):
-    print("\t" + "\t".join(cdr_list))
+    #print("\t" + "\t".join(cdr_list))
     for cdr1 in cdr_list:
-        print(cdr1 + "\t", end="")
+        #print(cdr1 + "\t", end="")
         for cdr2 in cdr_list:
             print("{:.6f}".format(distance_matrix[cdr1].get(cdr2, 0)), end="\t")
         print()
