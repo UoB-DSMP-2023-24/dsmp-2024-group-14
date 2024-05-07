@@ -16,7 +16,7 @@ This project contains a series of tasks for processing TCR (T-cell receptor) dat
 - `allCode/`
   - `task1_data_process_all.ipynb`: Code for data preprocessing
   - `task3_distance_matrix_all.ipynb`: Code for calculating distance matrices
-  - `task4_Dimensionality_Reduction.ipynb`: Code for plotting TCRs in 2D
+  - `task4_Dimensionality_Reduction.ipynb`: Code for plotting the TCRs in 2 dimensions
   - `task5_hierarchical_clustering.ipynb`: Code for clustering TCRs
   - `task6_knn_all_results.ipynb`: Code for predicting antigen specificity
   - `data/`: Folder for storing all data 
